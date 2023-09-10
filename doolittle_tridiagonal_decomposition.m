@@ -7,7 +7,6 @@ function [L, U] = doolittle_tridiagonal_decomposition(A)
     n = length(A);
     L = eye(n); % Initialize L as an identity matrix
     U = zeros(n); % Initialize U as an all-zero matrix
-
     % Perform LU decomposition
     for k = 1:n
         U(k, k) = A(k, k);
