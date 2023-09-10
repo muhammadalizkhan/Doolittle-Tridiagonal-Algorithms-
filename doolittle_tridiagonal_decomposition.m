@@ -4,7 +4,6 @@ function [L, U] = doolittle_tridiagonal_decomposition(A)
     if m ~= n || any(diag(A, -1) == 0) || any(diag(A, 1) == 0)
     error('Input matrix is not tridiagonal');
     end
-    
     n = length(A);
     L = eye(n); % Initialize L as an identity matrix
     U = zeros(n); % Initialize U as an all-zero matrix
