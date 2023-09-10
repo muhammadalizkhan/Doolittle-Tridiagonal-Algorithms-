@@ -2,7 +2,6 @@ function [L, U] = doolittle_tridiagonal_decomposition(A)
     % Check if the input matrix is tridiagonal
     [m, n] = size(A);
     if m ~= n || any(diag(A, -1) == 0) || any(diag(A, 1) == 0)
-        error('Input matrix is not tridiagonal');
     end
     
     n = length(A);
